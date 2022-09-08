@@ -37,7 +37,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: android-all-in-one-video-downloader
-        path: app/build/outputs/apk/release/app-arm64-v8a-release.apk
+        path: ./**/app-arm64-v8a-*.apk
 
     - name: Download Artifacts
       uses: actions/download-artifact@v2
