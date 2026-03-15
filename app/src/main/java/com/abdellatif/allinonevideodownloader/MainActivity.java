@@ -1,5 +1,6 @@
 package com.abdellatif.allinonevideodownloader;
 
+import com.abdellatif.allinonevideodownloader.BuildConfig;
 import static com.yausername.youtubedl_android.YoutubeDL.UpdateStatus.ALREADY_UP_TO_DATE;
 
 import android.content.Intent;
@@ -36,9 +37,6 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnStreamingExample;
-    private Button btnDownloadingExample;
-    private Button btnCommandExample;
     private Button btnUpdate;
 
     //Image Buttons
@@ -71,15 +69,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initListeners() {
-        btnStreamingExample.setOnClickListener(this);
-        btnDownloadingExample.setOnClickListener(this);
+        // removed demo buttons
+        //btnStreamingExample.setOnClickListener(this);
+        //btnDownloadingExample.setOnClickListener(this);
         //btnCommandExample.setOnClickListener(this);
         btnUpdate.setOnClickListener(this);
     }
 
     private void initViews() {
-        btnStreamingExample = findViewById(R.id.btn_streaming_example);
-        btnDownloadingExample = findViewById(R.id.btn_downloading_example);
+        //btnStreamingExample = findViewById(R.id.btn_streaming_example);
+        //btnDownloadingExample = findViewById(R.id.btn_downloading_example);
         //btnCommandExample = findViewById(R.id.btn_command_example);
         btnUpdate = findViewById(R.id.btn_update);
         progressBar = findViewById(R.id.progress_bar);
@@ -89,28 +88,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case R.id.btn_streaming_example: {
-                Intent i = new Intent(MainActivity.this, StreamingExampleActivity.class);
-                startActivity(i);
-                break;
-            }
-            case R.id.btn_downloading_example: {
-                Intent i = new Intent(MainActivity.this, DownloadingExampleActivity.class);
-                startActivity(i);
-                break;
-            }
-//            case R.id.btn_command_example: {
-//                Intent i = new Intent(MainActivity.this, CommandExampleActivity.class);
-//                startActivity(i);
-//                break;
-//            }
-            case R.id.btn_update: {
-                updateYoutubeDL();
-                break;
-            }
-        }
-
+    case R.id.btn_update: {
+        updateYoutubeDL();
+        break;
     }
+  }
+}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
