@@ -62,7 +62,7 @@ dependencies {
     implementation "com.github.yausername.youtubedl-android:aria2c:$youtubedlAndroidVer"
 
     implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
-    implementation "com.devbrackets.android:exomedia:4.3.0"
+    implementation "com.github.brianwernick:ExoMedia:4.3.0"
     def lottieVersion = "3.4.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
     implementation 'com.github.GrenderG:Toasty:1.5.2'
