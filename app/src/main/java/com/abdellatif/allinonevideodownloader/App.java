@@ -1,6 +1,5 @@
 package com.abdellatif.allinonevideodownloader;
 
-import com.abdellatif.allinonevideodownloader.BuildConfig;
 import android.app.Application;
 import android.util.Log;
 import android.widget.Toast;

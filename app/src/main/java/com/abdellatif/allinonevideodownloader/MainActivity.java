@@ -1,6 +1,5 @@
 package com.abdellatif.allinonevideodownloader;
 
-import com.abdellatif.allinonevideodownloader.BuildConfig;
 import static com.yausername.youtubedl_android.YoutubeDL.UpdateStatus.ALREADY_UP_TO_DATE;
 
 import android.content.Intent;
@@ -87,11 +86,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-        switch (v.getId()) {
-    case R.id.btn_update: {
-        updateYoutubeDL();
-        break;
-    }
+        if (v.getId() == R.id.btn_update) {
+    updateYoutubeDL();
   }
 }
 
@@ -103,17 +99,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_menu: {
-                showMenuDialog();
-                return true;
-            }
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    if (item.getItemId() == R.id.action_menu) {
+        showMenuDialog();
+        return true;
     }
+
+    return super.onOptionsItemSelected(item);
+}
 
     private void updateYoutubeDL() {
         isUpdated = preferences.getBoolean("isUpdated", false);
