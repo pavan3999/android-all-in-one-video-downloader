@@ -1,7 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace "com.abdellatif.allinonevideodownloader"
     compileSdkVersion 34
+
     defaultConfig {
         applicationId "com.abdellatif.allinonevideodownloader"
         minSdkVersion 21
